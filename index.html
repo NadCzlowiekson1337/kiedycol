@@ -50,7 +50,13 @@
         days = "";
     }
 		
-		document.getElementById("howold").innerText = "City of Lights jest tworzone już " + months + days;
+    if (years > 1) {
+	years = years + " lata ";
+    } else {
+	years = years + " rok ";
+    }	
+		
+		document.getElementById("howold").innerText = "City of Lights jest tworzone już " + years + months + days;
 		document.getElementById("days").innerText = "(" + diff + " dni)";
 
 		function show() {
